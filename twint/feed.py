@@ -22,7 +22,7 @@ def Follow(response):
         print('error time:')
         print(print(datetime.now()))
         c.Retryiteration = c.Retryiteration+1
-        c.Resume = "ufc_followers_resume.session"+str(c.retryiteration)
+        c.Resume = "ufc_followers_resume.session"+str(c.Retryiteration)
         c.Randwait = np.random.randint(low = 360, high = 3600)
     
         print('waiting (s):')
