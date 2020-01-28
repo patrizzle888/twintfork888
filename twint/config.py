@@ -74,3 +74,6 @@ class Config:
     Translate = False
     TranslateSrc = "en"
     TranslateDest = "en"    
+    ###custom shit
+    retryiteration = 1
+    randwait = 0
