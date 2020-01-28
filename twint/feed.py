@@ -26,9 +26,9 @@ def Follow(response):
         c.Randwait = np.random.randint(low = 360, high = 3600)
     
         print('waiting (s):')
-        print(c.randwait)
+        print(c.Randwait)
     
-        time.sleep(c.randwait)
+        time.sleep(c.Randwait)
         twint.run.Followers(c)
         
     return follow, cursor
