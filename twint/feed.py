@@ -17,13 +17,13 @@ def Follow(response):
         
         print()
         print("on resume:")
-        print(c.retryiteration)
+        print(c.Retryiteration)
         print()
         print('error time:')
         print(print(datetime.now()))
-        c.retryiteration = c.retryiteration+1
+        c.Retryiteration = c.Retryiteration+1
         c.Resume = "ufc_followers_resume.session"+str(c.retryiteration)
-        c.randwait = np.random.randint(low = 360, high = 3600)
+        c.Randwait = np.random.randint(low = 360, high = 3600)
     
         print('waiting (s):')
         print(c.randwait)
