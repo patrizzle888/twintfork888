@@ -13,22 +13,21 @@ def Follow(response):
         cursor = findall(r'cursor=(.*?)">', str(cursor))[0]
     except IndexError:
         
-        global c
-        global retryiteration
+        
         print()
         print("on resume:")
-        print(retryiteration)
+        print(c.retryiteration)
         print()
         print('error time:')
         print(print(datetime.now()))
-        retryiteration = retryiteration+1
-        c.Resume = "ufc_followers_resume.session"+str(retryiteration)
-        randwait = np.random.randint(low = 360, high = 3600)
+        c.retryiteration = c.retryiteration+1
+        c.Resume = "ufc_followers_resume.session"+str(c.retryiteration)
+        c.randwait = np.random.randint(low = 360, high = 3600)
     
         print('waiting (s):')
-        print(randwait)
+        print(c.randwait)
     
-        time.sleep(randwait)
+        time.sleep(c.randwait)
         twint.run.Followers(c)
         
     return follow, cursor
