@@ -9,10 +9,7 @@ def Follow(response):
     soup = BeautifulSoup(response, "html.parser")
     follow = soup.find_all("td", "info fifty screenname")
     cursor = soup.find_all("div", "w-button-more")
-    
-        cursor = findall(r'cursor=(.*?)">', str(cursor))[0]
-    
-
+    cursor = findall(r'cursor=(.*?)">', str(cursor))[0]
     return follow, cursor
 
 def Mobile(response):
