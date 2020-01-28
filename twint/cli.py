@@ -125,8 +125,8 @@ def initialize(args):
     c.Filter_retweets = args.filter_retweets
     c.Translate = args.translate
     c.TranslateDest = args.translate_dest
-    c.retryiteration = 1
-    c.randwait = 0
+    c.Retryiteration = args.retryiteration
+    c.Randwait = args.randwait
     return c
 
 def options():
