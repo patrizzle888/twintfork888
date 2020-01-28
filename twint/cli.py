@@ -46,6 +46,7 @@ def check(args):
             error("Error", "Please specify an output file (Example: -o file.csv).")
         elif args.json:
             error("Error", "Please specify an output file (Example: -o file.json).")
+    
 
 def loadUserList(ul, _type):
     """ Concatenate users
@@ -124,6 +125,8 @@ def initialize(args):
     c.Filter_retweets = args.filter_retweets
     c.Translate = args.translate
     c.TranslateDest = args.translate_dest
+    c.retryiteration = 1
+    c.randwait = 0
     return c
 
 def options():
