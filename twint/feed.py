@@ -9,10 +9,9 @@ def Follow(response):
     soup = BeautifulSoup(response, "html.parser")
     follow = soup.find_all("td", "info fifty screenname")
     cursor = soup.find_all("div", "w-button-more")
-    try:
+    
         cursor = findall(r'cursor=(.*?)">', str(cursor))[0]
-    except IndexError:
-        logme.critical(__name__+':Follow:IndexError')
+    
 
     return follow, cursor
 
