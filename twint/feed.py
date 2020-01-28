@@ -13,7 +13,8 @@ def Follow(response):
         cursor = findall(r'cursor=(.*?)">', str(cursor))[0]
     except IndexError:
         
-    
+        global c
+        global retryiteration
         print()
         print("on resume:")
         print(retryiteration)
