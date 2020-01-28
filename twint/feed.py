@@ -4,6 +4,7 @@ from json import loads
 
 import logging as logme
 
+from . import config
 from . import cli
 def Follow(response):
     logme.debug(__name__+':Follow')
